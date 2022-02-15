@@ -20,58 +20,6 @@ app.get('/api/notes', (req, res) =>
 );
 
 //route to post notes to db.json file
-// app.post('/api/notes', (req, res) => {
-//   console.info(`${req.method} request received to add a note!`)
-//   console.log(req.body);
-//   const { title, text } = req.body;
-
-//   if (title && text) {
-//     const newNote = {
-//       title,
-//       text
-//     };
-
-//     fs.readFile(`./db/db.json`, 'utf8', (err, data) => {
-//       if (err) {
-//         console.error(err);
-//       } else {
-//         console.log(data)
-//         const parsedNotes = JSON.parse(data);
-
-//         parsedNotes.push(newNote);
-
-//         fs.writeFile(`./db/db.json`, JSON.stringify(parsedNotes, null, 4),
-//           (writeErr) =>
-//             writeErr
-//               ? console.error(writeErr)
-//               : console.info('Successfully added note!')
-//         );
-
-//       }
-//     })
-
-//     // const newNoteString = JSON.stringify(newNote);
-
-//     // fs.writeFileSync(`./db/db.json`, newNoteString, (err) =>
-//     //   err
-//     //     ? console.error(err)
-//     //     : console.log('New note has been added')
-
-//     // );
-
-//     const response = {
-//       status: `success`,
-//       body: newNote,
-//     };
-//     console.log(response);
-//     res.status(201).json(response);
-//   } else {
-//     res.status(500).json('Error in submitting note')
-//   }
-
-// });
-
-//route to post notes to db.json file
 app.post('/api/notes', (req, res) => {
   console.info(`${req.method} request received to add a note.`)
 
