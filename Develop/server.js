@@ -20,9 +20,61 @@ app.get('/api/notes', (req, res) =>
 );
 
 //route to post notes to db.json file
+// app.post('/api/notes', (req, res) => {
+//   console.info(`${req.method} request received to add a note!`)
+//   console.log(req.body);
+//   const { title, text } = req.body;
+
+//   if (title && text) {
+//     const newNote = {
+//       title,
+//       text
+//     };
+
+//     fs.readFile(`./db/db.json`, 'utf8', (err, data) => {
+//       if (err) {
+//         console.error(err);
+//       } else {
+//         console.log(data)
+//         const parsedNotes = JSON.parse(data);
+
+//         parsedNotes.push(newNote);
+
+//         fs.writeFile(`./db/db.json`, JSON.stringify(parsedNotes, null, 4),
+//           (writeErr) =>
+//             writeErr
+//               ? console.error(writeErr)
+//               : console.info('Successfully added note!')
+//         );
+
+//       }
+//     })
+
+//     // const newNoteString = JSON.stringify(newNote);
+
+//     // fs.writeFileSync(`./db/db.json`, newNoteString, (err) =>
+//     //   err
+//     //     ? console.error(err)
+//     //     : console.log('New note has been added')
+
+//     // );
+
+//     const response = {
+//       status: `success`,
+//       body: newNote,
+//     };
+//     console.log(response);
+//     res.status(201).json(response);
+//   } else {
+//     res.status(500).json('Error in submitting note')
+//   }
+
+// });
+
+//route to post notes to db.json file
 app.post('/api/notes', (req, res) => {
-  console.info(`${req.method} request received to add a note!`)
-  console.log(req.body);
+  console.info(`${req.method} request received to add a note.`)
+
   const { title, text } = req.body;
 
   if (title && text) {
@@ -31,38 +83,46 @@ app.post('/api/notes', (req, res) => {
       text
     };
 
-    const newNoteString = JSON.stringify(newNote);
+    fs.readFile('./db/db.json', 'utf8', (err, data) => {
+      if (err) {
+        console.error(err);
+      } else {
+        const parsedNotes = JSON.parse(data);
 
-    fs.appendFile(`./db/db.json`, newNoteString, (err) =>
-    err
-    ? console.error(err)
-    :console.log('New note has been added')
-    
-    );
+        parsedNotes.push(newNote);
 
- const response = {
-      status: `success`,
+        fs.writeFile('./db/db.json', JSON.stringify(parsedNotes, null, 4),
+          (writeErr) =>
+            writeErr
+              ? console.error(writeErr)
+              : console.info('Successfully added note!')
+        );
+      }
+    });
+
+    const response = {
+      status: 'success',
       body: newNote,
     };
-    console.log(response);
-    res.status(201).json(response);
+
+console.log(response);
+res.status(201).json(response);
   } else {
-    res.status(500).json('Error in submitting note')
+    res.status(500).json('Error in positing note');
   }
-
-});
-
-
-//wildcard route to direct users to main html page
-app.get('*', (req, res) =>
-  res.sendFile(path.join(__dirname, 'public/index.html'))
-);
+  });
 
 
-//port listener
-app.listen(PORT, () =>
-  console.log(`App listening at http://localhost:${PORT}`)
-)
+  //wildcard route to direct users to main html page
+  app.get('*', (req, res) =>
+    res.sendFile(path.join(__dirname, 'public/index.html'))
+  );
+
+
+  //port listener
+  app.listen(PORT, () =>
+    console.log(`App listening at http://localhost:${PORT}`)
+  )
 
 
 
