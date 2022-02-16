@@ -4,6 +4,10 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 const fs = require('fs')
 const notes = require('./db/db.json')
+//set unique IDs
+const { v4: uuidv4 } = require('uuid');
+
+console.log(uuidv4())
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -23,12 +27,13 @@ app.get('/api/notes', (req, res) =>
 app.post('/api/notes', (req, res) => {
   console.info(`${req.method} request received to add a note.`)
 
-  const { title, text } = req.body;
+  const {title, text} = req.body;
 
   if (title && text) {
     const newNote = {
       title,
-      text
+      text,
+      id: uuidv4()
     };
 
     fs.readFile('./db/db.json', 'utf8', (err, data) => {
