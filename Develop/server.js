@@ -3,7 +3,19 @@ const path = require('path');
 const PORT = process.env.PORT || 3001;
 const app = express();
 
+
+//
+//import api
+const api = require('./routes/notes.js')
+
+//middleware
 app.use(express.static('public'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use('/api', api)
+
+
+//
 
 //route to notes html
 app.get('/notes', (req, res) =>
