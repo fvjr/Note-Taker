@@ -1,12 +1,6 @@
 [
     {
-        "title": "666",
-        "text": "666",
-        "id": "15ebc8d2-c66b-43d6-b30d-511663a4523e"
-    },
-    {
-        "title": "777",
-        "text": "777",
-        "id": "5ec5a45d-172a-4a70-a6bc-e2bd59387d75"
+        "title":"Test Title",
+        "text":"Test text"
     }
 ]
