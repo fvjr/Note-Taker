@@ -1,6 +1,7 @@
 const notesRoute = require('express').Router();
 const notes = require('../db/db.json')
 const fs = require('fs');
+const { v4: uuidv4} = require('uuid');
 
 // * `GET /api/notes` should read the `db.json` file and return all saved notes as JSON.
 notesRoute.get('/', (req, res) => {
