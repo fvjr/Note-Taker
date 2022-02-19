@@ -1,7 +1,7 @@
-# Team-Profile-Generator   
+# Note-Taker  
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ## Description
-Use this application to quickly create team profiles.
+Use this application to write notes to help you stay organized when completing tasks. 
 
 ## Table of Contents
 - [Installation](#installation)
@@ -20,13 +20,13 @@ Clone from my GitHub repo
 
 ## Usage
 Instructions and examples for use:
-Use this application via command lines in the terminal ("node index") and then answer the prompts with your team's information
+Clone from my GitHub repo and open a server via the terminal, or visit the deployed application on Heroku at "https://pacific-spire-87690.herokuapp.com/"
 
 ## Credits
 N/A
 
 ## Resources
-https://nodejs.org/en/docs/guides/, https://www.w3schools.com/nodejs/nodejs_filesystem.asp, NPM, NPM jest, NPM inquirer
+NPM, Express, UUID
 
 ## Contributing
 Interested in contributing?
@@ -34,7 +34,7 @@ Email me or reach out via GitHub
 
 ## Tests
 Want to run tests with this project?
- Clone from my repo and then test via terminal commands ("npm run test")
+ Clone from my repo, create tests, and then run the tests via terminal
 
 ## Questions 
 Have any questions or want to collaborate on another project? 
@@ -54,7 +54,4 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-    
-
-
-VIDEO Walkthrough:https://watch.screencastify.com/v/9sAPeFGbBkryyZybc6DX
+ 
