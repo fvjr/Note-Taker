@@ -6,7 +6,7 @@ const app = express();
 const api = require('./routes/index.js');
 
 //middleware
-app.use(express.static('public'));
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/api', api);
 app.use(express.static('public'));
