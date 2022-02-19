@@ -26,7 +26,6 @@ notesRoute.post('/', (req, res) => {
   //destructuring items in req.body
   const { title, text } = req.body;
 //if all needed info for a new note is available, make a new note
-console.log(1)
   if (title && text) {
     const newNote = {
       title,
@@ -34,7 +33,6 @@ console.log(1)
       id: uuidv4()
     };
 //obtain existing notes
-console.log(2)
     fs.readFile('./db/db.json', 'utf8', (err, data) => {
       if (err) {
         console.error(err);
@@ -43,7 +41,8 @@ console.log(2)
         const parsedNotes = JSON.parse(data);
 //add a new note to database json
         parsedNotes.push(newNote);
-        console.log(newNote);
+        //log for testing purposes to see newNote
+        // console.log(newNote);
         //write updated array to db.json
         fs.writeFile(
           './db/db.json',
