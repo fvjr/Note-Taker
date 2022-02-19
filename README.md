@@ -22,7 +22,7 @@ Clone from my GitHub repo
 Instructions and examples for use:
 Clone from my GitHub repo and open a server via the terminal, or visit the deployed application on Heroku at "https://pacific-spire-87690.herokuapp.com/"
 
-!App mock-up image.](./Assets/screenshot.png)
+[!App mock-up image.](./Assets/screenshot.png)
 
 ## Credits
 N/A
