@@ -1,61 +1,27 @@
 [
     {
-        "title": "Test Title",
-        "text": "Test text"
+        "title": "This is a test note!",
+        "text": "It's used for testing purposes!",
+        "id": "cbb99657-63fc-45e6-adb4-bc18dfdfbf81"
     },
     {
-        "title": "4564",
-        "text": "4564",
-        "id": "f95318b1-2137-436f-a98f-cbfcb491f9e2"
+        "title": "Check emails",
+        "text": "Assign priority level",
+        "id": "01a1a6cd-ec5a-461c-8b91-e492f9f98681"
     },
     {
-        "title": "this is a note",
-        "text": "this is some text",
-        "id": "c53ae810-c5d1-47e5-b9fd-c0ae81e709bd"
+        "title": "Review inventory ",
+        "text": "If inventory levels are low, order more inventory ",
+        "id": "ec617e6a-83ab-4753-b066-90f565b68692"
     },
     {
-        "title": "poiernfeo[irgnoeirgn",
-        "text": "erpoignroignerg",
-        "id": "da21f965-a045-466a-81eb-76f4b7c92fb3"
+        "title": "Update catalogue",
+        "text": "Maybe develop a CLI app to manage databases",
+        "id": "1090e6ed-40e1-442a-82a7-f358a9dc6481"
     },
     {
-        "title": "reftert",
-        "text": "4r34r5",
-        "id": "10f09645-752b-4445-ba49-cec57538f704"
-    },
-    {
-        "title": "234234",
-        "text": "234234",
-        "id": "65ed832d-d6a3-4635-9f6b-1a3d88158a5f"
-    },
-    {
-        "title": "345",
-        "text": "345345",
-        "id": "3b984fbd-fc15-4f7a-845a-2f09d33240f0"
-    },
-    {
-        "title": "asdasd",
-        "text": "asdasd",
-        "id": "ec8c8c01-596b-492a-bc75-27d5938113f9"
-    },
-    {
-        "title": "666",
-        "text": "666",
-        "id": "840dc222-0865-4111-8b8c-abaee5a79df4"
-    },
-    {
-        "title": "777",
-        "text": "777",
-        "id": "32160753-1d63-4fa4-832e-bde09bd777be"
-    },
-    {
-        "title": "8888",
-        "text": "8888",
-        "id": "8969be2a-23dc-49b1-945e-6436bbf2d589"
-    },
-    {
-        "title": "sdfs",
-        "text": "sdfsdf",
-        "id": "2ffbaacc-8417-43d5-b0fa-49550c918c31"
+        "title": "Lunch meeting ",
+        "text": "Discuss agile methodology ",
+        "id": "784dbe24-6976-4aae-be06-61ff7ec8daf1"
     }
 ]
